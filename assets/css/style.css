@@ -1,0 +1,43 @@
+body {
+
+    background-color: blue;
+    margin: 0;
+    height: 100%;
+    
+
+}
+
+h1 {
+
+    
+    margin-top: 50px;
+    font-size: 80px;
+    
+    
+
+}
+
+.container {
+
+    display: grid;
+    height: 700px;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    background-color: gold;
+    
+    
+    justify-content: center;
+    
+    
+        
+     
+}
+
+button {
+
+    width: 300px;
+    margin-top: 150px;
+    height: 90px;
+    justify-self: center;
+    font-size: 50px;
+
+}
