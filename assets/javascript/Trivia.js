@@ -2,7 +2,8 @@ $(document).ready(function () {
 
     function buildQuestionList () {
 
-        
+        let displaystring = "";
+
         const quizQuestionArray = [
             
     
@@ -10,13 +11,13 @@ $(document).ready(function () {
 
               quest1Answers: {
 
-                  a: "F22 Raptor",
+                  a: 'F22 Raptor',
 
-                  b: "F15 Eagle",
+                  b: 'F15 Eagle',
 
-                  c: "F16 Falcon",
+                  c: 'F16 Falcon',
 
-                  d: "F4 Phantom"
+                  d: 'F4 Phantom'
 
                 },
 
@@ -80,9 +81,35 @@ $(document).ready(function () {
     
         ];  //end of quizQuestionArray
 
-         
-        console.log("The 1st Question is: " + quizQuestionArray[0].quest1);
+             
+        
+        displaystring = "<h2>" + quizQuestionArray[0].quest1 + "</h2>";
 
+                //console.log(displaystring);
+
+        $("#QuizQuestns").html(displaystring);  
+
+        displaystring = "";
+
+        //for (i=0; i < 5; i++) {
+
+            //displaystring = "<h3>" + quizQuestionArray["quest1"]["quest1Answers"].a + "</h3>";
+
+            const answerDiv = $("<div>");
+
+            displaystring1 = "<h3>" + quizQuestionArray[0].quest1Answers.a + "</h3>";
+            displaystring2 = "<h3>" + quizQuestionArray[0].quest1Answers.b + "</h3>";
+            displaystring3 = "<h3>" + quizQuestionArray[0].quest1Answers.c + "</h3>";
+            displaystring4 = "<h3>" + quizQuestionArray[0].quest1Answers.d + "</h3>";
+
+            answerDiv.append(displaystring1,displaystring2,displaystring3,displaystring4)
+        
+            $("#quizAnswr1").append(answerDiv);
+        
+        //}    
+
+
+       
        
 
     };   //end of buildQuestionList function
@@ -96,6 +123,10 @@ $(document).ready(function () {
         //Removes the Start Button from the DOM
 
         $("#Startbtn").remove();
+
+        buildQuestionList ();
+
+        
         
    
     }
@@ -107,6 +138,6 @@ $(document).ready(function () {
     
     $("#Startbtn").on("click", rmstrtbtn);
 
-    buildQuestionList ();
+    
     
 });
