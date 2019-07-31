@@ -7,11 +7,23 @@ body {
 
 }
 
+h1 {
+
+    padding: 0px;
+    height: 80px;
+    font-size: 80px;
+    margin-left: 100px;
+    margin-bottom: 160px;
+    align-items: center;
+
+}
+
+
 .container {
 
     display: grid;
-    height: 700px;
-    grid-template-rows: 120px 60px 60px 60px 100px;
+    height: 1200px;
+    grid-template-rows: 100px 60px 60px 60px 60px 100px;
     background-color: gold;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -19,28 +31,80 @@ body {
         
 }
 
-h1 {
+#formTimer {
 
-    padding: 0px;
-    height: 80px;
+    margin-top: 8px;
+    margin-left: 120px;
+    margin-bottom: 30px;
+    background-color: white;
+    font-size: 55px;
+    width: 630px;
+    height: 90px;
+    color: black;
+    align-items: center;
+    padding-left: 60px;
+    
+
 }
-
-
 
 button {
 
     width: 300px;
-    margin-top: 150px;
+    margin-top: 800px;
     height: 90px;
     justify-self: center;
-    font-size: 50px;
+    font-size: 30px;
+    
 
 }
 
 #QuizQuestns {
 
     padding-bottom: 0;
+    margin-top: 70px;
     margin-bottom: 10px;
     height: 50px;
+    font-size: 30px;
 }
+
+#Question1,
+#Question2,
+#Question3,
+#Question4,
+#Question5,
+#Question6
+
+{
+
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 25px;
+
+}
+
+#answrBlk1,
+#answrBlk2,
+#answrBlk3,
+#answrBlk4,
+#answrBlk5,
+#answrBlk6
+
+{
+
+    
+    margin-left: 20px;
+    font-size: 25px;
+
+}
+
+
+
+#questMain {
+
+    margin-top: 60px;
+
+}
+
+
+
 
