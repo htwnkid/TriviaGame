@@ -1,6 +1,26 @@
 $(document).ready(function () {
 
-    function buildQuestionList () {
+    $("#resultsTable").hide();
+
+    var userQuestion = "";
+    var userAnswer = "";
+    var totalCorAnswrs = 0;
+    var totalWrgAnswrs = 0;
+    var intervalId;
+
+    let answerarray = [];
+
+    //  The stop function
+    function stop() {
+
+        //  Clears our intervalId
+        //  We just pass the name of the interval
+        //  to the clearInterval function.
+        
+        clearInterval(intervalId);
+    }
+
+    function buildQuestionList (quesAnswers) {
 
         let displaystring = "";
 
@@ -136,8 +156,106 @@ $(document).ready(function () {
         
         //}    
 
+        console.log("I got to the end of buildQuestionList");
 
-    };   //end of buildQuestionList function
+        console.log(quesAnswers);
+
+        userQuestion = "";
+        userAnswer = "";
+
+        quesAnswers.forEach(myFunction);
+
+        function myFunction(item) {
+
+            console.log("item := " + item);
+
+            if (item != null) {
+
+                    //userQuestion = item.substring(0,1);
+                    userQuestion = item[0];
+                    userAnswer = item[1];
+
+                    console.log("UserQuestion := " + userQuestion);
+                    console.log("UserAnswer := " + userAnswer);
+
+                    if ((Number(userQuestion) - 1) === 0) {
+
+                        if (userAnswer === quizQuestionArray[0].rightAnswer) {
+
+                            totalCorAnswrs += 1;
+                        
+                        } else {
+
+                            totalWrgAnswrs += 1;
+                        }
+
+
+                    } else if ((Number(userQuestion) - 1) === 1) {
+
+                        if (userAnswer === quizQuestionArray[1].rightAnswer) {
+
+                            totalCorAnswrs += 1;
+                        
+                        } else {
+
+                            totalWrgAnswrs += 1;
+                        }
+
+                    } else if ((Number(userQuestion) - 1) === 2) {
+
+                        if (userAnswer === quizQuestionArray[2].rightAnswer) {
+
+                            totalCorAnswrs += 1;
+                        
+                        } else {
+
+                            totalWrgAnswrs += 1;
+                        }
+
+                    } else if ((Number(userQuestion) - 1) === 3) {
+
+                        if (userAnswer === quizQuestionArray[3].rightAnswer) {
+
+                            totalCorAnswrs += 1;
+                        
+                        } else {
+
+                            totalWrgAnswrs += 1;
+                        }
+
+                    } else if ((Number(userQuestion) - 1) === 4) {
+
+                        if (userAnswer === quizQuestionArray[4].rightAnswer) {
+
+                            totalCorAnswrs += 1;
+                        
+                        } else {
+
+                            totalWrgAnswrs += 1;
+                        }
+
+                    } else if ((Number(userQuestion) - 1) === 5) {
+
+                        if (userAnswer === quizQuestionArray[5].rightAnswer) {
+
+                            totalCorAnswrs += 1;
+                        
+                        } else {
+
+                            totalWrgAnswrs += 1;
+                        }
+                    }
+
+                }
+
+            }
+          
+        console.log("totalCorAnswrs := " + totalCorAnswrs);
+        console.log("totalWrgAnswrs := " + totalWrgAnswrs);
+        
+
+
+    }   //end of buildQuestionList function
 
 
     function gameTimer () {
@@ -177,7 +295,22 @@ $(document).ready(function () {
                                 stop();
 
                                 //  Alert the user that time is up.
-                                alert("Time Up!");
+                                alert("Times Up!");
+
+                                //  Clear Questions from Screen and display Results Table
+                                clearForm();
+
+                                console.log("I got to the point where the results should be displayed");
+
+                                getSelAnswrs();
+
+                                //$( "#resultsTable" ).show(10000);
+                                //$("#tablerow1").html("Total Correct Answers");
+                                //$("#tablerow1a").text(totalCorAnswrs);
+                                //$("#tablerow2").text("Total Wrong Answers");
+                               // $("#tablerow2a").text(totalWrgAnswrs);
+
+                                
                             }
             }
 
@@ -203,52 +336,132 @@ $(document).ready(function () {
     }
 
 
-            function rmstrtbtn() {
+            function clearForm() {
 
                 //Removes the Start Button from the DOM
 
-                $("#Startbtn").remove();
+                $("#Donebtn").remove();
 
-                buildQuestionList ();
-            
-        
-            }
+                //$("#mainform").remove();
+
+                $( "#mainform" ).hide(20000);
+
+                //Stops the Timer Countdown
+
+                stop(intervalId);
+
+                
+
+                
+
+             }
 
 
             function getSelectedButton(buttonGroup){
-                for (var i = 0; i < buttonGroup.length; i++) {
-                    if (buttonGroup[i].checked) {
 
-                        console.log("I got here kevin 1");
+                
+                    var radioValue1 = $( "input[name = quest1]:checked" ).val();
 
-                        return i;
+                    if (typeof radioValue1 === 'undefined') {
+                        
+                        radioValue1 = null;
+
+                        totalWrgAnswrs += 1;
+
                     }
-                }
 
-                console.log("I got here kevin 2");
+                    answerarray.push(radioValue1);
 
-                return 0;
+                    var radioValue2 = $("input[name = quest2]:checked").val();
+
+                    if (typeof radioValue2 === 'undefined') {
+                        
+                        radioValue2 = null;
+
+                        totalWrgAnswrs += 1;
+
+                    }
+
+                    answerarray.push(radioValue2);
+
+                    var radioValue3 = $("input[name = quest3]:checked").val();
+
+                    if (typeof radioValue3 === 'undefined') {
+                        
+                        radioValue3 = null;
+
+                        totalWrgAnswrs += 1;
+
+                    }
+
+                    answerarray.push(radioValue3);
+
+                    var radioValue4 = $("input[name=quest4]:checked").val();
+
+                    if (typeof radioValue4 === 'undefined') {
+                        
+                        radioValue4 = null;
+
+                        totalWrgAnswrs += 1;
+
+                    }
+
+                    answerarray.push(radioValue4);
+
+                    var radioValue5 = $("input[name=quest5]:checked").val();
+
+                    if (typeof radioValue5 === 'undefined') {
+                        
+                        radioValue5 = null;
+
+                        totalWrgAnswrs += 1;
+
+                    }
+
+                    answerarray.push(radioValue5);
+
+                    var radioValue6 = $("input[name=quest6]:checked").val();
+
+                    if (typeof radioValue6 === 'undefined') {
+                        
+                        radioValue6 = null;
+
+                        totalWrgAnswrs += 1;
+
+                    }
+
+                    answerarray.push(radioValue6);
+                
+                    //console.log("Array Values are: " + answerarray);
+
+                    return answerarray;
+
             }
             
-
+            
             function getSelAnswrs() {
 
-                var i = getSelectedButton(quest1);
+                var quesAnswers = getSelectedButton();
 
-                console.log(i);
+                //console.log("I returned from answerarray");
+                //console.log(i);
 
-                if (i+1 === quest1.length) {
+                buildQuestionList (quesAnswers);
 
-                    quest1[0].checked = true
+                //alert ("Total Number of Correct Answers is := " + totalCorAnswrs, "Total Number of Wrong Answers is := " + totalWrgAnswrs );
 
-                    
-                } else {
+                //  Clear Questions from Screen and display Results Table
+                
+                $( "#formTimer" ).remove();
 
-                     quest1[i+1].checked = true
+                clearForm();
 
-
-                }
-
+                $( "#resultsTable" ).show(10000);
+                $("#tablerow1").html("Total Correct Answers");
+                $("#tablerow1a").text(totalCorAnswrs);
+                $("#tablerow2").text("Total Wrong Answers");
+                $("#tablerow2a").text(totalWrgAnswrs);
+                
             }
 
     
@@ -257,8 +470,6 @@ $(document).ready(function () {
     //Main Section
     
     $("#Donebtn").on("click", getSelAnswrs);
-
-
 
     gameTimer();
 
