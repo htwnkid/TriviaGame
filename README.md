@@ -13,4 +13,9 @@ The Totally Trivial Trivia! game is a fun, easy to use game, designed to test yo
 * A Summary screen of the Total Correct and Incorect Answers will appear at the end of the game.
 
 
+# Link to Trivia Game
+
+ https://htwnkid.github.io/TriviaGame/
+
+
 
