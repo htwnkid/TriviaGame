@@ -16,120 +16,126 @@ $(document).ready(function () {
         //  Clears our intervalId
         //  We just pass the name of the interval
         //  to the clearInterval function.
-        
+
         clearInterval(intervalId);
     }
 
-    function buildQuestionList (quesAnswers) {
+    function buildQuestionList(quesAnswers) {
 
         let displaystring = "";
 
         const quizQuestionArray = [
-            
-    
-            { quest1: "Which U.S fighter is the current Air Superiority fighter?",
 
-                  rightAnswer: "a"
+
+            {
+                quest1: "Which U.S fighter is the current Air Superiority fighter?",
+
+                rightAnswer: "a"
 
             },
 
-            { quest2: "Which U.S fighter flew during the Vietnam War?",
+            {
+                quest2: "Which U.S fighter flew during the Vietnam War?",
 
-              quest2Answers: {
+                quest2Answers: {
 
-                  a: "F22 Raptor",
+                    a: "F22 Raptor",
 
-                  b: "F15 Eagle",
+                    b: "F15 Eagle",
 
-                  c: "F16 Falcon",
+                    c: "F16 Falcon",
 
-                  d: "F4 Phantom"
-                  
+                    d: "F4 Phantom"
+
                 },
 
                 rightAnswer: "d"
 
             },
 
-            { quest3: "Which U.S fighter has never been defeated in an air-to-air engagement?",
+            {
+                quest3: "Which U.S fighter has never been defeated in an air-to-air engagement?",
 
-              quest3Answers: {
+                quest3Answers: {
 
-                  a: "F22 Raptor",
+                    a: "F22 Raptor",
 
-                  b: "F15 Eagle",
+                    b: "F15 Eagle",
 
-                  c: "F16 Falcon",
+                    c: "F16 Falcon",
 
-                  d: "F4 Phantom"
-                  
+                    d: "F4 Phantom"
+
                 },
 
                 rightAnswer: "b"
 
             },
 
-            { quest4: "Which U.S fighter is manufactured by General Dynamics in Forth Worth, Texas?",
+            {
+                quest4: "Which U.S fighter is manufactured by General Dynamics in Forth Worth, Texas?",
 
-              quest4Answers: {
+                quest4Answers: {
 
-                  a: "F22 Raptor",
+                    a: "F22 Raptor",
 
-                  b: "F15 Eagle",
+                    b: "F15 Eagle",
 
-                  c: "F16 Falcon",
+                    c: "F16 Falcon",
 
-                  d: "F4 Phantom"
-                  
+                    d: "F4 Phantom"
+
                 },
 
                 rightAnswer: "c"
 
             },
 
-            { quest5: "Which U.S fighter features Super Cruise and Vector Thrust?",
+            {
+                quest5: "Which U.S fighter features Super Cruise and Vector Thrust?",
 
-              quest5Answers: {
+                quest5Answers: {
 
-                  a: "F22 Raptor",
+                    a: "F22 Raptor",
 
-                  b: "F15 Eagle",
+                    b: "F15 Eagle",
 
-                  c: "F16 Falcon",
+                    c: "F16 Falcon",
 
-                  d: "F4 Phantom"
-                  
+                    d: "F4 Phantom"
+
                 },
 
                 rightAnswer: "a"
 
             },
 
-            { quest6: "Which U.S fighter provides the pilot with the ability to see through the bottom of the fighter?",
+            {
+                quest6: "Which U.S fighter provides the pilot with the ability to see through the bottom of the fighter?",
 
-              quest4Answers: {
+                quest4Answers: {
 
-                  a: "F22 Raptor",
+                    a: "F22 Raptor",
 
-                  b: "F15 Eagle",
+                    b: "F15 Eagle",
 
-                  c: "F16 Falcon",
+                    c: "F16 Falcon",
 
-                  d: "F35 Lightning"
-                  
+                    d: "F35 Lightning"
+
                 },
 
                 rightAnswer: "d"
 
             }
-    
+
         ];  //end of quizQuestionArray
 
-             
-        
+
+
         //displaystring = "<h2>" + quizQuestionArray[0].quest1 + "</h2>";
 
-                //console.log(displaystring);
+        //console.log(displaystring);
 
         //$("#QuizQuestns").html(displaystring);  
 
@@ -137,23 +143,23 @@ $(document).ready(function () {
 
         //for (i=0; i < 5; i++) {
 
-            //displaystring1 = "<h3>" + quizQuestionArray["quest1"]["quest1Answers"].a + "</h3>";
+        //displaystring1 = "<h3>" + quizQuestionArray["quest1"]["quest1Answers"].a + "</h3>";
 
-            //const answerDiv = $("<div>");
+        //const answerDiv = $("<div>");
 
-            //displaystring1 = "<h3>" + quizQuestionArray[0].quest1Answers.a + "</h3>";
-            //displaystring2 = "<h3>" + quizQuestionArray[0].quest1Answers.b + "</h3>";
-            //displaystring3 = "<h3>" + quizQuestionArray[0].quest1Answers.c + "</h3>";
-            //displaystring4 = "<h3>" + quizQuestionArray[0].quest1Answers.d + "</h3>";
+        //displaystring1 = "<h3>" + quizQuestionArray[0].quest1Answers.a + "</h3>";
+        //displaystring2 = "<h3>" + quizQuestionArray[0].quest1Answers.b + "</h3>";
+        //displaystring3 = "<h3>" + quizQuestionArray[0].quest1Answers.c + "</h3>";
+        //displaystring4 = "<h3>" + quizQuestionArray[0].quest1Answers.d + "</h3>";
 
-            //answerDiv.append(displaystring1,displaystring2,displaystring3,displaystring4)
+        //answerDiv.append(displaystring1,displaystring2,displaystring3,displaystring4)
 
-            //console.log("Displaystring1 = " + displaystring1);
+        //console.log("Displaystring1 = " + displaystring1);
 
-            //answerDiv.append(displaystring1);
-        
-            //$("#quizAnswr1").append(answerDiv);
-        
+        //answerDiv.append(displaystring1);
+
+        //$("#quizAnswr1").append(answerDiv);
+
         //}    
 
         console.log("I got to the end of buildQuestionList");
@@ -171,164 +177,164 @@ $(document).ready(function () {
 
             if (item != null) {
 
-                    //userQuestion = item.substring(0,1);
-                    userQuestion = item[0];
-                    userAnswer = item[1];
+                //userQuestion = item.substring(0,1);
+                userQuestion = item[0];
+                userAnswer = item[1];
 
-                    console.log("UserQuestion := " + userQuestion);
-                    console.log("UserAnswer := " + userAnswer);
+                console.log("UserQuestion := " + userQuestion);
+                console.log("UserAnswer := " + userAnswer);
 
-                    if ((Number(userQuestion) - 1) === 0) {
+                if ((Number(userQuestion) - 1) === 0) {
 
-                        if (userAnswer === quizQuestionArray[0].rightAnswer) {
+                    if (userAnswer === quizQuestionArray[0].rightAnswer) {
 
-                            totalCorAnswrs += 1;
-                        
-                        } else {
+                        totalCorAnswrs += 1;
 
-                            totalWrgAnswrs += 1;
-                        }
+                    } else {
 
-
-                    } else if ((Number(userQuestion) - 1) === 1) {
-
-                        if (userAnswer === quizQuestionArray[1].rightAnswer) {
-
-                            totalCorAnswrs += 1;
-                        
-                        } else {
-
-                            totalWrgAnswrs += 1;
-                        }
-
-                    } else if ((Number(userQuestion) - 1) === 2) {
-
-                        if (userAnswer === quizQuestionArray[2].rightAnswer) {
-
-                            totalCorAnswrs += 1;
-                        
-                        } else {
-
-                            totalWrgAnswrs += 1;
-                        }
-
-                    } else if ((Number(userQuestion) - 1) === 3) {
-
-                        if (userAnswer === quizQuestionArray[3].rightAnswer) {
-
-                            totalCorAnswrs += 1;
-                        
-                        } else {
-
-                            totalWrgAnswrs += 1;
-                        }
-
-                    } else if ((Number(userQuestion) - 1) === 4) {
-
-                        if (userAnswer === quizQuestionArray[4].rightAnswer) {
-
-                            totalCorAnswrs += 1;
-                        
-                        } else {
-
-                            totalWrgAnswrs += 1;
-                        }
-
-                    } else if ((Number(userQuestion) - 1) === 5) {
-
-                        if (userAnswer === quizQuestionArray[5].rightAnswer) {
-
-                            totalCorAnswrs += 1;
-                        
-                        } else {
-
-                            totalWrgAnswrs += 1;
-                        }
+                        totalWrgAnswrs += 1;
                     }
 
+
+                } else if ((Number(userQuestion) - 1) === 1) {
+
+                    if (userAnswer === quizQuestionArray[1].rightAnswer) {
+
+                        totalCorAnswrs += 1;
+
+                    } else {
+
+                        totalWrgAnswrs += 1;
+                    }
+
+                } else if ((Number(userQuestion) - 1) === 2) {
+
+                    if (userAnswer === quizQuestionArray[2].rightAnswer) {
+
+                        totalCorAnswrs += 1;
+
+                    } else {
+
+                        totalWrgAnswrs += 1;
+                    }
+
+                } else if ((Number(userQuestion) - 1) === 3) {
+
+                    if (userAnswer === quizQuestionArray[3].rightAnswer) {
+
+                        totalCorAnswrs += 1;
+
+                    } else {
+
+                        totalWrgAnswrs += 1;
+                    }
+
+                } else if ((Number(userQuestion) - 1) === 4) {
+
+                    if (userAnswer === quizQuestionArray[4].rightAnswer) {
+
+                        totalCorAnswrs += 1;
+
+                    } else {
+
+                        totalWrgAnswrs += 1;
+                    }
+
+                } else if ((Number(userQuestion) - 1) === 5) {
+
+                    if (userAnswer === quizQuestionArray[5].rightAnswer) {
+
+                        totalCorAnswrs += 1;
+
+                    } else {
+
+                        totalWrgAnswrs += 1;
+                    }
                 }
 
             }
-          
+
+        }
+
         console.log("totalCorAnswrs := " + totalCorAnswrs);
         console.log("totalWrgAnswrs := " + totalWrgAnswrs);
-        
+
 
 
     }   //end of buildQuestionList function
 
 
-    function gameTimer () {
+    function gameTimer() {
 
-            //  Interval Demonstration
-            //  Set our number counter to 120.
-            var number = 120;
+        //  Interval Demonstration
+        //  Set our number counter to 120.
+        var number = 120;
 
-            //  Variable that will hold our interval ID when we execute
-            //  the "run" function
-            var intervalId;
+        //  Variable that will hold our interval ID when we execute
+        //  the "run" function
+        var intervalId;
 
-            //  The run function sets an interval
-            //  that runs the decrement function once a second.
-            //  *****BUG FIX******** 
-            //  Clearing the intervalId prior to setting our new intervalId will not allow multiple instances.
+        //  The run function sets an interval
+        //  that runs the decrement function once a second.
+        //  *****BUG FIX******** 
+        //  Clearing the intervalId prior to setting our new intervalId will not allow multiple instances.
 
-            function run() {
+        function run() {
             clearInterval(intervalId);
             intervalId = setInterval(decrement, 1000);
+        }
+
+        //  The decrement function.
+        function decrement() {
+
+            //  Decrease number by one.
+            number--;
+
+            //  Show the number in the #show-number tag.
+            $("#formTimer").html("Time Remaining:  " + number);
+
+
+            //  Once number hits zero...
+            if (number === 0) {
+
+                //  ...run the stop function.
+                stop();
+
+                //  Alert the user that time is up.
+                alert("Times Up!");
+
+                //  Clear Questions from Screen and display Results Table
+                clearForm();
+
+                console.log("I got to the point where the results should be displayed");
+
+                getSelAnswrs();
+
+                //$( "#resultsTable" ).show(10000);
+                //$("#tablerow1").html("Total Correct Answers");
+                //$("#tablerow1a").text(totalCorAnswrs);
+                //$("#tablerow2").text("Total Wrong Answers");
+                // $("#tablerow2a").text(totalWrgAnswrs);
+
+
             }
+        }
 
-            //  The decrement function.
-            function decrement() {
+        //  The stop function
+        function stop() {
 
-                    //  Decrease number by one.
-                    number--;
+            //  Clears our intervalId
+            //  We just pass the name of the interval
+            //  to the clearInterval function.
 
-                    //  Show the number in the #show-number tag.
-                    $("#formTimer").html("Time Remaining:  " + number);
+            clearInterval(intervalId);
+        }
 
+        //  Execute the run function.
+        run();
 
-                            //  Once number hits zero...
-                            if (number === 0) {
-
-                                //  ...run the stop function.
-                                stop();
-
-                                //  Alert the user that time is up.
-                                alert("Times Up!");
-
-                                //  Clear Questions from Screen and display Results Table
-                                clearForm();
-
-                                console.log("I got to the point where the results should be displayed");
-
-                                getSelAnswrs();
-
-                                //$( "#resultsTable" ).show(10000);
-                                //$("#tablerow1").html("Total Correct Answers");
-                                //$("#tablerow1a").text(totalCorAnswrs);
-                                //$("#tablerow2").text("Total Wrong Answers");
-                               // $("#tablerow2a").text(totalWrgAnswrs);
-
-                                
-                            }
-            }
-
-           //  The stop function
-            function stop() {
-
-                    //  Clears our intervalId
-                    //  We just pass the name of the interval
-                    //  to the clearInterval function.
-                    
-                    clearInterval(intervalId);
-            } 
-
-            //  Execute the run function.
-            run();
-
-            //  Execute the decrement function
-            decrement();
+        //  Execute the decrement function
+        decrement();
 
 
 
@@ -336,143 +342,143 @@ $(document).ready(function () {
     }
 
 
-            function clearForm() {
+    function clearForm() {
 
-                //Removes the Start Button from the DOM
+        //Removes the Start Button from the DOM
 
-                $("#Donebtn").remove();
+        $("#Donebtn").remove();
 
-                //$("#mainform").remove();
+        //$("#mainform").remove();
 
-                $( "#mainform" ).hide(20000);
+        $("#mainform").hide(20000);
 
-                //Stops the Timer Countdown
+        //Stops the Timer Countdown
 
-                stop(intervalId);
-
-                
-
-                
-
-             }
+        stop(intervalId);
 
 
-            function getSelectedButton(buttonGroup){
 
-                
-                    var radioValue1 = $( "input[name = quest1]:checked" ).val();
 
-                    if (typeof radioValue1 === 'undefined') {
-                        
-                        radioValue1 = null;
 
-                        totalWrgAnswrs += 1;
+    }
 
-                    }
 
-                    answerarray.push(radioValue1);
+    function getSelectedButton(buttonGroup) {
 
-                    var radioValue2 = $("input[name = quest2]:checked").val();
 
-                    if (typeof radioValue2 === 'undefined') {
-                        
-                        radioValue2 = null;
+        var radioValue1 = $("input[name = quest1]:checked").val();
 
-                        totalWrgAnswrs += 1;
+        if (typeof radioValue1 === 'undefined') {
 
-                    }
+            radioValue1 = null;
 
-                    answerarray.push(radioValue2);
+            totalWrgAnswrs += 1;
 
-                    var radioValue3 = $("input[name = quest3]:checked").val();
+        }
 
-                    if (typeof radioValue3 === 'undefined') {
-                        
-                        radioValue3 = null;
+        answerarray.push(radioValue1);
 
-                        totalWrgAnswrs += 1;
+        var radioValue2 = $("input[name = quest2]:checked").val();
 
-                    }
+        if (typeof radioValue2 === 'undefined') {
 
-                    answerarray.push(radioValue3);
+            radioValue2 = null;
 
-                    var radioValue4 = $("input[name=quest4]:checked").val();
+            totalWrgAnswrs += 1;
 
-                    if (typeof radioValue4 === 'undefined') {
-                        
-                        radioValue4 = null;
+        }
 
-                        totalWrgAnswrs += 1;
+        answerarray.push(radioValue2);
 
-                    }
+        var radioValue3 = $("input[name = quest3]:checked").val();
 
-                    answerarray.push(radioValue4);
+        if (typeof radioValue3 === 'undefined') {
 
-                    var radioValue5 = $("input[name=quest5]:checked").val();
+            radioValue3 = null;
 
-                    if (typeof radioValue5 === 'undefined') {
-                        
-                        radioValue5 = null;
+            totalWrgAnswrs += 1;
 
-                        totalWrgAnswrs += 1;
+        }
 
-                    }
+        answerarray.push(radioValue3);
 
-                    answerarray.push(radioValue5);
+        var radioValue4 = $("input[name=quest4]:checked").val();
 
-                    var radioValue6 = $("input[name=quest6]:checked").val();
+        if (typeof radioValue4 === 'undefined') {
 
-                    if (typeof radioValue6 === 'undefined') {
-                        
-                        radioValue6 = null;
+            radioValue4 = null;
 
-                        totalWrgAnswrs += 1;
+            totalWrgAnswrs += 1;
 
-                    }
+        }
 
-                    answerarray.push(radioValue6);
-                
-                    //console.log("Array Values are: " + answerarray);
+        answerarray.push(radioValue4);
 
-                    return answerarray;
+        var radioValue5 = $("input[name=quest5]:checked").val();
 
-            }
-            
-            
-            function getSelAnswrs() {
+        if (typeof radioValue5 === 'undefined') {
 
-                var quesAnswers = getSelectedButton();
+            radioValue5 = null;
 
-                //console.log("I returned from answerarray");
-                //console.log(i);
+            totalWrgAnswrs += 1;
 
-                buildQuestionList (quesAnswers);
+        }
 
-                //alert ("Total Number of Correct Answers is := " + totalCorAnswrs, "Total Number of Wrong Answers is := " + totalWrgAnswrs );
+        answerarray.push(radioValue5);
 
-                //  Clear Questions from Screen and display Results Table
-                
-                $( "#formTimer" ).remove();
+        var radioValue6 = $("input[name=quest6]:checked").val();
 
-                clearForm();
+        if (typeof radioValue6 === 'undefined') {
 
-                $( "#resultsTable" ).show(10000);
-                $("#tablerow1").html("Total Correct Answers");
-                $("#tablerow1a").text(totalCorAnswrs);
-                $("#tablerow2").text("Total Wrong Answers");
-                $("#tablerow2a").text(totalWrgAnswrs);
-                
-            }
+            radioValue6 = null;
 
-    
+            totalWrgAnswrs += 1;
 
-    
+        }
+
+        answerarray.push(radioValue6);
+
+        //console.log("Array Values are: " + answerarray);
+
+        return answerarray;
+
+    }
+
+
+    function getSelAnswrs() {
+
+        var quesAnswers = getSelectedButton();
+
+        //console.log("I returned from answerarray");
+        //console.log(i);
+
+        buildQuestionList(quesAnswers);
+
+        //alert ("Total Number of Correct Answers is := " + totalCorAnswrs, "Total Number of Wrong Answers is := " + totalWrgAnswrs );
+
+        //  Clear Questions from Screen and display Results Table
+
+        $("#formTimer").remove();
+
+        clearForm();
+
+        $("#resultsTable").show(10000);
+        $("#tablerow1").html("Total Correct Answers");
+        $("#tablerow1a").text(totalCorAnswrs);
+        $("#tablerow2").text("Total Wrong Answers");
+        $("#tablerow2a").text(totalWrgAnswrs);
+
+    }
+
+
+
+
     //Main Section
-    
+
     $("#Donebtn").on("click", getSelAnswrs);
 
     gameTimer();
 
-    
-    
+
+
 });
